@@ -150,8 +150,8 @@
 	home.stateVersion = "24.05";
 	programs.git = {
 		enable = true;
-		userName = "Valeria Morkhat";
-		userEmail = "vmorkhat@proton.me";
+		settings.user.name = "Valeria Morkhat";
+		settings.user.email = "vmorkhat@proton.me";
 	};
   };
 }
