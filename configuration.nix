@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+	<home-manager/nixos>
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -144,4 +145,13 @@
 	git
 	bitwarden-desktop
   ];
+
+  home-manager.users.lera = {
+	home.stateVersion = "24.05";
+	programs.git = {
+		enable = true;
+		userName = "Valeria Morkhat";
+		userEmail = "vmorkhat@proton.me";
+	};
+  };
 }
