@@ -144,6 +144,10 @@
 	gh
 	git
 	bitwarden-desktop
+	vscode
+	obsidian
+	claude-code
+	fira-code
   ];
 
   home-manager.users.lera = {
@@ -164,4 +168,8 @@
 	gnome-calendar
 ];
 
+	fonts.packages = with pkgs; [ fira-code ];
+	fonts.fontconfig.defaultFonts = {
+		monospace = [ "Fira Code" ];
+	};
 }
