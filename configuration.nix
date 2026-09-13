@@ -154,4 +154,14 @@
 		settings.user.email = "vmorkhat@proton.me";
 	};
   };
+
+  environment.gnome.excludePackages = with pkgs; [
+	gnome-music
+	gnome-weather
+	gnome-contacts
+	gnome-maps
+	totem
+	gnome-calendar
+];
+
 }
