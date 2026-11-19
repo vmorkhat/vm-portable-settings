@@ -5,6 +5,7 @@ Repo for declarative working system setup.
 - [Common](#common)
   - [IntelliJ settings](#intellij-settings)
   - [Shell commands](#shell-commands)
+  - [Claude Code](#claude-code)
 - [Linux](#linux)
   - [NixOS](#nixos)
 - [macOS](#macos)
@@ -24,7 +25,7 @@ Import in any IntelliJ: **File → Manage IDE Settings → Import Settings…** 
 
 ### Shell commands
 
-Custom command helpers in `bashrc/custom.sh`. Work in both bash and zsh.
+Custom mnemonic command helpers in `bashrc/custom.sh`. Work in both bash and zsh.
 
 | Command | What it does |
 | --- | --- |
@@ -32,6 +33,30 @@ Custom command helpers in `bashrc/custom.sh`. Work in both bash and zsh.
 | `nb <words>` | New branch named `<date>-<words>`, e.g. `nb fix login` → `2026-11-19-fix-login` |
 | `chmp` | Checkout `main` and pull |
 | `dnuke` | Kill all running Docker containers (`docker kill`) |
+
+### Claude Code
+
+Snapshot of `~/.claude` user config in `claude/`:
+
+- `claude/CLAUDE.md`: global instructions
+- `claude/plugins.md`: installed plugins and how to install them
+- `claude/skills/`: all skills from this account (synced from claude.ai). Delete the ones you don't need.
+
+Restore:
+
+```sh
+cp claude/CLAUDE.md ~/.claude/CLAUDE.md
+mkdir -p ~/.claude/skills && cp -R claude/skills/. ~/.claude/skills/
+```
+
+Then install plugins as listed in `claude/plugins.md`.
+
+**General AI usage strategy**:
+
+- Understand AI's reasoning before approving any step. Don't understand ⇒ clarify first, analyze and only then approve/edit strategy. Keep own engineering & critical thinking skills sharp.
+- Keep the AI intervention in the codebase to the minimum. Adhere safety rules to prevent any unwanted write changes. Keep the code quality, readability and maintainability high.
+- Always keep AI easily stoppable. Prevent spawning sub-ajents and subshells to keep the attention focus to one context window unless explicitly asked.
+- Keep AI's communication style optimal and concise. Avoid producing unreadable slop texts. 
 
 ## Linux
 

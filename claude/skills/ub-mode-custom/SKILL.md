@@ -1,0 +1,143 @@
+---
+name: "ub-mode-custom"
+description: "Follow the reduced principles when writing or changing code. Every change follows First Make it Work, then Make it Right, then Follow Practice. Use when the user runs /ub-mode or asks for the reduced principles."
+---
+
+# ub-mode
+
+Every time you are asked to make a change follow:
+* First Make it Work.
+* Then Make it Right.
+* Follow Practice
+
+CLAUDE.md shell and safety rules always apply. Any tool run, install or deletion below needs approval first.
+
+# First Make it Work
+
+## Laziness Protocol
+
+* One decision lives in one place.
+* Ship the smallest edit that solves the problem.
+
+## Foundational Thinking
+
+* Get the data shape right before you write the logic.
+* Do first whatever helps every later phase.
+* If a concurrent writer would matter, do not share state.
+
+## TDD
+
+* Write the failing test before you change the code.
+* See it fail for the reason you expect.
+* Make the smallest change that makes it pass.
+* If an honest test is impractical, do not write a bad one.
+
+## Redesign From First Principles
+
+* Default is the smallest edit. Redesign only when the new requirement cannot fit the old design without a hack.
+* Then ask what you would have built if it had been there from the start, think that through in plan mode, and get approval before starting.
+* Deliver it in pieces.
+
+## Attack the Premise
+
+* When two fixes that share one premise fail the same gate, write that premise in one sentence and count which actors hold the imbalance.
+* Remove the assignment.
+* Do not start another fix until you have done that.
+
+## Subtract Before You Add
+
+* Take complexity out before you add anything, only in code the change touches.
+
+## Outcome-Oriented Execution
+
+* Aim at the end state you can check.
+* A break in the middle is allowed when you planned it and can undo it.
+
+## Build the Lever
+
+* Build a tool only when the same manual work repeats and a one-off would cost more than the tool.
+* Propose it first, build only after approval.
+* Do one unit by hand, then make the tool match that unit.
+
+## Architecture
+
+### Model the Domain
+
+* Put the domain in a structure that makes the illegal states impossible.
+* Maintain a glossary of domain terms.
+* If the code is already clear and local, leave it.
+
+### Boundary Discipline
+
+* Check the data where it enters.
+* Inside, trust it.
+* Keep the business logic in a pure function.
+
+### Type System Discipline
+
+* Make the illegal value impossible to write.
+* Parse outside data once, where it comes in.
+* Do not silence the compiler.
+
+### Make Operations Idempotent
+
+* Running it twice, or running it after a crash halfway through, ends in the same state.
+
+### Separate Before Serializing Shared State
+
+* If they do not need the same mutable thing, give each its own.
+* If they do, allow one writer, and enforce that in the structure.
+
+# Then Make it Right
+
+## Fix Root Causes
+
+* Reproduce it.
+* Fix the cause.
+* A guard that only hides the crash is not a fix.
+
+## Sequence work into verifiable units
+
+* Finish one small unit and check it.
+* Then start the next.
+
+## Test Behavior, Not Implementation
+
+* The test calls the code the way its user does and checks the result that user would see.
+* If the test would still pass when every function returned nothing, throw it out.
+
+## Crapper
+
+* Use the crapper tool, after approval.
+* Reduce each function under CRAP 10 by splitting it, by testing it, or both, only in code the change touches.
+* Consider whether case statements are worth reducing.
+
+## Dryer
+
+* Use the dryer tool, after approval, to eliminate duplication that ranks 0.8 or above in code the change touches.
+
+## Mutator
+
+* Use the mutator tool, after approval.
+* Cover the uncovered.
+* Kill the survivors.
+* Delete dead code in code the change touches; list any other dead code and ask.
+
+## Refactoring
+
+* Pin what the code does.
+* Change the structure, only in code the change touches.
+* Prove the behavior did not change.
+
+# Practice
+
+## Keep a Log
+
+* Log every action and the reason in `tasks/todo.md`.
+* Give a high-level summary at each step, and the full log in the review section on completion.
+
+## Worktree Cleanup
+
+* Find what is safe to remove and confirm nothing still in use needs it.
+* List it and ask before removing anything.
+* Uncommitted work waits for a decision.
