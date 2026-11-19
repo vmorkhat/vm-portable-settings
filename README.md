@@ -53,9 +53,9 @@ Then install plugins as listed in `claude/plugins.md`.
 
 **General AI usage strategy**:
 
-- Understand AI's reasoning before approving any step. Don't understand ⇒ clarify first, analyze and only then approve/edit strategy. Keep own engineering & critical thinking skills sharp.
-- Keep the AI intervention in the codebase to the minimum. Adhere safety rules to prevent any unwanted write changes. Keep the code quality, readability and maintainability high.
-- Always keep AI easily stoppable. Prevent spawning sub-ajents and subshells to keep the attention focus to one context window unless explicitly asked.
+- Understand AI's reasoning before approving any step. Don't understand ⇒ clarify first, analyze and only then approve/edit strategy. Keep your own engineering & critical thinking skills sharp.
+- Keep the AI intervention in the codebase to a minimum. Adhere to safety rules to prevent any unwanted writes. Keep the code quality, readability and maintainability high.
+- Always keep AI easily stoppable. Prevent spawning subajents and subshells to keep attention focus on one context window unless explicitly asked.
 - Keep AI's communication style optimal and concise. Avoid producing unreadable slop texts. 
 
 ## Linux
