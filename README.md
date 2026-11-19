@@ -21,3 +21,15 @@ Import in any IntelliJ: **File → Manage IDE Settings → Import Settings…** 
 ## macOS
 
 - Karabiner keymap
+
+### Karabiner keymap
+
+Goal: make macOS + IntelliJ feel as close to Windows as possible, keymap-wise. Same muscle memory for IntelliJ shortcuts, copy/paste, window and input switching.
+
+Config lives in `karabiner/` (`karabiner.json` + `assets/`). Snapshot of `~/.config/karabiner/`; re-copy after changing settings in the Karabiner GUI:
+
+```sh
+cp ~/.config/karabiner/karabiner.json karabiner/ && cp -R ~/.config/karabiner/assets karabiner/
+```
+
+Restore on a new Mac: copy `karabiner/` to `~/.config/karabiner/`.

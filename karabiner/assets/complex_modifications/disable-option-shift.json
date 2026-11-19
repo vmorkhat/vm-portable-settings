@@ -1,0 +1,20 @@
+{
+  "title": "Disable Option+Shift character input",
+  "rules": [
+    {
+      "description": "Disable Option+Shift special characters",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "any",
+            "modifiers": {
+              "mandatory": ["shift", "option"]
+            }
+          },
+          "to": []
+        }
+      ]
+    }
+  ]
+}
