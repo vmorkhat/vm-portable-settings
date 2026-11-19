@@ -17,7 +17,12 @@ Repo for declarative working system setup.
 
 ### IntelliJ settings
 
-Settings live unpacked in `intellij/`. Pack them into `intellij/settings.zip`.
+Settings live unpacked in `intellij/`. Pack the settings into `intellij/settings.zip` (not tracked by git) with:
+
+```sh
+./intellij/pack.sh
+```
+
 Import in any IntelliJ: **File → Manage IDE Settings → Import Settings…** and pick `intellij/settings.zip`.
 
 Content:
