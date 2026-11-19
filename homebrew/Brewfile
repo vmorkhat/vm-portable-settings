@@ -1,0 +1,36 @@
+# HashiCorp's Homebrew tap, source of terraform (not in homebrew-core anymore)
+tap "hashicorp/tap"
+brew "bun"
+brew "cmake"
+brew "gh"
+brew "git"
+brew "go"
+# Infrastructure as code tool, from the hashicorp/tap tap
+brew "hashicorp/tap/terraform"
+# Kubernetes package manager
+brew "helm"
+# JSON command-line processor
+brew "jq"
+brew "just"
+brew "kubectx"
+brew "kubernetes-cli"
+# PostgreSQL client library
+brew "libpq", link: true
+brew "node"
+brew "pnpm"
+brew "pre-commit"
+brew "python@3.15"
+brew "yarn"
+# YAML/JSON/XML command-line processor, like jq
+brew "yq"
+cask "bruno"
+cask "docker-desktop"
+cask "github"
+cask "intellij-idea"
+cask "karabiner-elements"
+cask "linearmouse"
+# Node version switcher
+cask "nvs"
+cask "visual-studio-code"
+npm "@anthropic-ai/claude-code"
+npm "@caveman-ai/cli"

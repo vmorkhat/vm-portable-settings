@@ -9,6 +9,7 @@ Repo for declarative working system setup.
 - [Linux](#linux)
   - [NixOS](#nixos)
 - [macOS](#macos)
+  - [Homebrew](#homebrew)
   - [Karabiner keymap](#karabiner-keymap)
 
 ## Common
@@ -72,6 +73,22 @@ sudo nixos-rebuild switch
 ```
 
 ## macOS
+
+### Homebrew
+
+`homebrew/Brewfile` lists everything installed on this Mac: formulae, casks and global npm packages.
+
+Install all of it on a new Mac first):
+
+```sh
+./homebrew/install.sh
+```
+
+Save: re-dump after installing or removing programs:
+
+```sh
+brew bundle dump --file=homebrew/Brewfile --force
+```
 
 ### Karabiner keymap
 
