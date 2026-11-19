@@ -1,0 +1,24 @@
+de.netnexus.camelcaseplugin
+com.intellij.classic.ui
+com.anthropic.code.plugin
+ru.adelf.idea.dotenv
+manjaro.epb
+com.github.camork.fileExpander
+com.github.copilot
+com.github.b3er.idea.plugins.arc.browser
+mobi.hsz.idea.gitignore
+org.elixir_lang
+com.intellij.javaee
+Key Promoter X
+name.kropp.intellij.makefile
+com.intellij.mcpServer
+mdx.js
+org.jetbrains.plugins.node-remote-interpreter
+org.intellij.prisma
+Pythonid
+PythonCore
+org.intellij.plugins.hcl
+nl.rubensten.texifyidea
+hg4idea
+PerforceDirectPlugin
+Subversion

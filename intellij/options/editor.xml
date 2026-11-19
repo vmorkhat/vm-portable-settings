@@ -1,0 +1,25 @@
+<application>
+  <component name="DeclarativeInlayHintsSettings">
+    <option name="enabledOptions">
+      <map>
+        <entry key="kotlin.lambdas.hints#hints.lambda.receivers.parameters" value="true" />
+      </map>
+    </option>
+    <option name="providerIdToEnabled">
+      <map>
+        <entry key="kotlin.compiler.plugins.modality" value="true" />
+        <entry key="kotlin.lambdas.hints" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="EditorSettings">
+    <option name="USE_SOFT_WRAPS" value="CONSOLE" />
+    <option name="IS_RIGHT_MARGIN_SHOWN" value="false" />
+    <option name="IS_FOLDING_OUTLINE_SHOWN" value="false" />
+    <option name="IS_FOLDING_OUTLINE_SHOWN_ONLY_ON_HOVER" value="false" />
+    <option name="SHOW_BREADCRUMBS" value="false" />
+  </component>
+  <component name="InlineCompletionOnboarding">
+    <option name="onboardingFinished" value="true" />
+  </component>
+</application>

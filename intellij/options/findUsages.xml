@@ -1,0 +1,7 @@
+<application>
+  <component name="FindUsagesSettings">
+    <option name="customScope" value="Project 'sovity-hub'" />
+    <option name="defaultScopeName" value="Project 'sovity-hub'" />
+    <option name="SEARCH_SCOPE" value="Project 'sovity-hub'" />
+  </component>
+</application>
