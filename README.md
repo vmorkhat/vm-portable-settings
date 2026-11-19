@@ -1,12 +1,16 @@
 # vm-portable-settings
 
-Repo for declarative system setup.
+Repo for declarative working system setup.
 
-## Linux laptop
+## Common:
 
-- NixOS `configuration.nix`
 - IntelliJ settings
-- Bashrc custom commands
+
+## Linux:
+- NixOS `configuration.nix` for quick machine setup
+
+## macOS:
+- Karabiner keymap
 
 ### Pack IntelliJ settings
 
