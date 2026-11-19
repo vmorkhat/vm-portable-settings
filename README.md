@@ -62,19 +62,25 @@ Open a new terminal afterwards.
 
 Snapshot of `~/.claude` config for software engineering:
 
-- `claude/CLAUDE.md`: global instructions
+- `claude/CLAUDE.md`: global instructions, for Claude Code only
 - `claude/plugins.md`: installed plugins and how to install them
 - `claude/skills/`: all skills used for engineering-related tasks.
 
 #### Install
 
-Copies `CLAUDE.md` and the skills into `~/.claude` with [`claude/install.sh`](claude/install.sh). An existing, different `~/.claude/CLAUDE.md` is saved as `CLAUDE.md.bak` first.
+##### CLAUDE.md
 
-```sh
-./claude/install.sh
-```
+Claude Code reads global instructions from `~/.claude/CLAUDE.md` and applies them to every project.
 
-Plugins are installed by hand as listed in `claude/plugins.md`.
+1. Open the `.claude` folder in your home directory (`~/.claude`; on Windows `%USERPROFILE%\.claude`). Create it if it doesn't exist.
+2. Put the content of `claude/CLAUDE.md` into the file `CLAUDE.md` there.
+
+##### Skills
+
+Skills create additional context for tasks of similar goal. AI will check for existance of already existing skills before answering, works both for chat and Claude Code.
+
+1. Inside `~/.claude`, create a `skills` folder if it doesn't exist. Copy the skill folders from `claude/skills/` into it.
+2. Start a new Claude Code session. The skills show up in the `/skills` list.
 
 **General AI usage strategy**:
 
