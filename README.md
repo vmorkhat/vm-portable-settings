@@ -46,20 +46,11 @@ Custom mnemonic command helpers in `bashrc/custom.sh`. Work in both bash and zsh
 
 ### Claude Code
 
-Snapshot of `~/.claude` user config in `claude/`:
+Snapshot of `~/.claude` config for software engineering:
 
 - `claude/CLAUDE.md`: global instructions
 - `claude/plugins.md`: installed plugins and how to install them
-- `claude/skills/`: all skills from this account (synced from claude.ai). Delete the ones you don't need.
-
-Restore:
-
-```sh
-cp claude/CLAUDE.md ~/.claude/CLAUDE.md
-mkdir -p ~/.claude/skills && cp -R claude/skills/. ~/.claude/skills/
-```
-
-Then install plugins as listed in `claude/plugins.md`.
+- `claude/skills/`: all skills used for engineering-related tasks.
 
 **General AI usage strategy**:
 
@@ -85,18 +76,6 @@ Install: copy `user.js` into the Firefox profile folder, then restart Firefox.
 2. Close Firefox.
 3. Copy the file in:
 
-```sh
-cp firefox/user.js "<profile folder>/user.js"
-```
-
-Typical profile folders:
-
-| OS | Path |
-| --- | --- |
-| macOS | `~/Library/Application Support/Firefox/Profiles/<id>.default-release/` |
-| Linux | `~/.mozilla/firefox/<id>.default-release/` |
-| Windows | `%APPDATA%\Mozilla\Firefox\Profiles\<id>.default-release\` |
-
 Firefox applies `user.js` on every start and overwrites the same prefs in `prefs.js`. To undo: delete `user.js`, then reset the prefs in `about:config` (removing the file alone doesn't revert them).
 
 ## Linux
@@ -116,9 +95,9 @@ sudo nixos-rebuild switch
 
 ### Homebrew
 
-`homebrew/Brewfile` lists everything installed on this Mac: formulae, casks and global npm packages.
+`homebrew/Brewfile` lists everything needed for an engineering Mac setup: formulae, casks and global npm packages.
 
-Install all of it on a new Mac first):
+Install all of it on a new Mac first:
 
 ```sh
 ./homebrew/install.sh
@@ -135,15 +114,3 @@ brew bundle dump --file=homebrew/Brewfile --force
 Goal: make macOS + IntelliJ feel as close to Windows as possible, keymap-wise. Same muscle memory for IntelliJ shortcuts, copy/paste, window and input switching.
 
 Config lives in `karabiner/` (`karabiner.json` + `assets/`). It is a snapshot of `~/.config/karabiner/`.
-
-Save: re-copy after changing settings in the Karabiner GUI:
-
-```sh
-cp ~/.config/karabiner/karabiner.json karabiner/ && cp -R ~/.config/karabiner/assets karabiner/
-```
-
-Restore on a new Mac:
-
-```sh
-mkdir -p ~/.config/karabiner && cp -R karabiner/. ~/.config/karabiner/
-```
