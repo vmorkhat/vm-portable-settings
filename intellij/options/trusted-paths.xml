@@ -2,41 +2,12 @@
   <component name="Trusted.Paths">
     <option name="TRUSTED_PROJECT_PATHS">
       <map>
-        <entry key="C:\Users\mssol\Documents\GitHub\Linkshegelianer" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\Spring-React-Fullstack-CRUD-webapp" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\automated-cv-updater" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\chat-app" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\cv-sot" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\dataspace-portal-ee" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\deploy-server" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\duplicate\java-algorithms-collections" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\duplicate\sovity-hub" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\duplicate\sovity-hub\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\edc-ee" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\edc-ee\connector" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\edc-ee\examples\chat-app\source-ee\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\edc-ee\examples\chat-app\source-final\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\edc-ee\examples\chat-app\source-starter-for-tutorial\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\java-algorithms-collections" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\nextjs-example-app" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\pukhanov-ru" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\react-bits-portfolio" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\sovity-hub" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\sovity-hub\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\sphinx-demo-app" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\sphinx-demo-app\backend" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\sphinx-demo-app\backend\gradle" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\terraform-live" value="true" />
-        <entry key="C:\Users\mssol\Documents\GitHub\vmorkhat" value="true" />
-        <entry key="C:\Users\mssol\IdeaProjects\automated-cv-updater" value="true" />
       </map>
     </option>
   </component>
   <component name="Trusted.Paths.Settings">
     <option name="TRUSTED_PATHS">
-      <list>
-        <option value="C:\Users\mssol\Documents\GitHub" />
-      </list>
+      <list />
     </option>
   </component>
 </application>

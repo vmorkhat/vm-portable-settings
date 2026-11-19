@@ -150,15 +150,6 @@
 	fira-code
   ];
 
-  home-manager.users.lera = {
-	home.stateVersion = "24.05";
-	programs.git = {
-		enable = true;
-		settings.user.name = "Valeria Morkhat";
-		settings.user.email = "vmorkhat@proton.me";
-	};
-  };
-
   environment.gnome.excludePackages = with pkgs; [
 	gnome-music
 	gnome-weather
