@@ -17,13 +17,7 @@ Repo for declarative working system setup.
 
 ### IntelliJ settings
 
-Settings live unpacked in `intellij/`. Pack the settings into `intellij/settings.zip` (not tracked by git) with:
-
-```sh
-./intellij/pack.sh
-```
-
-Import in any IntelliJ: **File → Manage IDE Settings → Import Settings…** and pick `intellij/settings.zip`.
+Settings live unpacked in `intellij/`. There is no ready zip in the repo.
 
 Content:
 - **Font:** Fira Code in the editor, the terminal (size 15) and the console (size 16, line spacing 1.2). Fira Code must be installed on the system.
@@ -32,6 +26,16 @@ Content:
 - **Spell and grammar:** Grazie with English (US), German and Russian. The dictionaries are included in `intellij/grazie/`.
 - **Plugins:** listed in `intellij/installed.txt`, e.g. GitHub Copilot, Claude Code, Key Promoter X, Python, Terraform (HCL), Prisma, .env, .ignore, Makefile, MCP Server.
 - **GitHub Copilot:** inline completions off, next edit suggestions on.
+
+#### Install
+
+Pack the settings into `intellij/settings.zip` (not tracked by git) with [`intellij/pack.sh`](intellij/pack.sh):
+
+```sh
+./intellij/pack.sh
+```
+
+Then in IntelliJ: **File → Manage IDE Settings → Import Settings…** and pick `intellij/settings.zip`.
 
 ### Shell commands
 
@@ -44,6 +48,16 @@ Custom mnemonic command helpers in `bashrc/custom.sh`. Work in both bash and zsh
 | `chmp` | Checkout `main` and pull |
 | `dnuke` | Kill all running Docker containers (`docker kill`) |
 
+#### Install
+
+Copy the content of `bashrc/custom.sh` into your shell's rc file, once: `~/.bashrc` (Linux, Git Bash on Windows) or `~/.zshrc` (macOS).
+
+```sh
+cat bashrc/custom.sh >> ~/.bashrc   # or ~/.zshrc
+```
+
+Open a new terminal afterwards.
+
 ### Claude Code
 
 Snapshot of `~/.claude` config for software engineering:
@@ -51,6 +65,16 @@ Snapshot of `~/.claude` config for software engineering:
 - `claude/CLAUDE.md`: global instructions
 - `claude/plugins.md`: installed plugins and how to install them
 - `claude/skills/`: all skills used for engineering-related tasks.
+
+#### Install
+
+Copies `CLAUDE.md` and the skills into `~/.claude` with [`claude/install.sh`](claude/install.sh). An existing, different `~/.claude/CLAUDE.md` is saved as `CLAUDE.md.bak` first.
+
+```sh
+./claude/install.sh
+```
+
+Plugins are installed by hand as listed in `claude/plugins.md`.
 
 **General AI usage strategy**:
 
@@ -84,11 +108,12 @@ Firefox applies `user.js` on every start and overwrites the same prefs in `prefs
 
 `configuration.nix` for quick machine setup, in `nixos-burner-setup/`.
 
-Apply on the target machine:
+#### Install
+
+Run on the NixOS machine with [`nixos-burner-setup/install.sh`](nixos-burner-setup/install.sh). It copies `configuration.nix` to `/etc/nixos/` (an existing, different one is saved as `configuration.nix.bak`) and runs `nixos-rebuild switch`. It asks for `sudo`.
 
 ```sh
-sudo cp nixos-burner-setup/configuration.nix /etc/nixos/configuration.nix
-sudo nixos-rebuild switch
+./nixos-burner-setup/install.sh
 ```
 
 ## macOS
@@ -97,16 +122,12 @@ sudo nixos-rebuild switch
 
 `homebrew/Brewfile` lists everything needed for an engineering Mac setup: formulae, casks and global npm packages.
 
-Install all of it on a new Mac first:
+#### Install
+
+Needs Homebrew first. Then install everything with [`homebrew/install.sh`](homebrew/install.sh):
 
 ```sh
 ./homebrew/install.sh
-```
-
-Save: re-dump after installing or removing programs:
-
-```sh
-brew bundle dump --file=homebrew/Brewfile --force
 ```
 
 ### Karabiner keymap
@@ -114,3 +135,11 @@ brew bundle dump --file=homebrew/Brewfile --force
 Goal: make macOS + IntelliJ feel as close to Windows as possible, keymap-wise. Same muscle memory for IntelliJ shortcuts, copy/paste, window and input switching.
 
 Config lives in `karabiner/` (`karabiner.json` + `assets/`). It is a snapshot of `~/.config/karabiner/`.
+
+#### Install
+
+Copies the config into `~/.config/karabiner/` with [`karabiner/install.sh`](karabiner/install.sh). An existing, different `karabiner.json` is saved as `karabiner.json.bak` first.
+
+```sh
+./karabiner/install.sh
+```
