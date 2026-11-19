@@ -17,13 +17,16 @@ Repo for declarative working system setup.
 
 ### IntelliJ settings
 
-Settings live unpacked in `intellij/`. Pack them into `intellij/settings.zip` from the repo root:
-
-```sh
-rm -f intellij/settings.zip && (cd intellij && zip -r settings.zip . -x '*.DS_Store' 'settings.zip')
-```
-
+Settings live unpacked in `intellij/`. Pack them into `intellij/settings.zip`.
 Import in any IntelliJ: **File → Manage IDE Settings → Import Settings…** and pick `intellij/settings.zip`.
+
+Content:
+- **Font:** Fira Code in the editor, the terminal (size 15) and the console (size 16, line spacing 1.2). Fira Code must be installed on the system.
+- **Look:** IntelliJ Light theme, compact UI density, main menu merged into the toolbar. Tool window stripes, status bar and navigation bar are hidden.
+- **Startup and exit:** doesn't reopen the last project, no exit confirmation, running processes are terminated on close.
+- **Spell and grammar:** Grazie with English (US), German and Russian. The dictionaries are included in `intellij/grazie/`.
+- **Plugins:** listed in `intellij/installed.txt`, e.g. GitHub Copilot, Claude Code, Key Promoter X, Python, Terraform (HCL), Prisma, .env, .ignore, Makefile, MCP Server.
+- **GitHub Copilot:** inline completions off, next edit suggestions on.
 
 ### Shell commands
 
