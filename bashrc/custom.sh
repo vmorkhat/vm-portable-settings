@@ -14,3 +14,19 @@ dnuke() {
   local ids="$(docker ps -q)"
   [ -n "$ids" ] && docker kill $ids
 }
+
+gpa() {
+    git fetch --all --prune || return
+    local current
+    current=$(git branch --show-current)
+    git for-each-ref --format='%(refname:short) %(upstream:short)' refs/heads |
+    while read -r branch upstream; do
+      [ -z "$upstream" ] && continue
+      if [ "$branch" = "$current" ]; then
+        git merge --ff-only "$upstream"
+      else
+        git fetch . "$upstream:$branch" 2>/dev/null || echo "skipped $branch (diverged)"
+      fi
+    done
+  }
+
